@@ -1,4 +1,4 @@
- # Build a Reusable Terraform Module to provision AWS infrastructure 
+ # Build Reusable Terraform Module to provision AWS infrastructure 
 
  Configuration files in this git repo
  
@@ -33,7 +33,7 @@ aws s3api get-bucket-versioning \
 ```
 
 
-# Create DynamoDB table for state locking.
+# Create DynamoDB table for state locking
 
 ```
 aws dynamodb create-table \
