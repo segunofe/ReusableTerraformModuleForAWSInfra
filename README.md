@@ -2,6 +2,24 @@
 
  Configuration files in this git repo
  
+ # File structure 
+
+ terraform/
+├── backend.tf          # for remote backend storage and locking - to store state file remotely 
+├── provider.tf
+├── main.tf              # calls module
+├── variables.tf
+├── terraform.tfvars      # to take in the values for the variables  like instance type (t3.micro), etc        
+├── outputs.tf            # output instance ids and private ips using the module and name of the outputs in the child module
+│
+└── modules/
+    └── aws-infra/
+        ├── main.tf      ✅ data + resource together
+        ├── variables.tf
+        └── outputs.tf    
+
+
+ 
  # Note 
  To store and lock the state file, it is recommended to create the S3 bucket and DynamoDB table manually either via AWS console or using AWS CLI commands.
  
