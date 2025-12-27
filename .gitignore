@@ -1,0 +1,13 @@
+# Ignore the local terraform directory (providers and modules)
+.terraform/
+
+# Ignore lock files if you don't want to track provider versions
+.terraform.lock.hcl
+
+# Ignore state files (Sensitive data!)
+*.tfstate
+*.tfstate.*
+
+# Ignore variables files containing secrets
+
+*.tfvars.json
