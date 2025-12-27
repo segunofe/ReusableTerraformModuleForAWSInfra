@@ -1,10 +1,10 @@
-Build a Reusable Terraform Module to provision AWS infrastructure 
+ # Build a Reusable Terraform Module to provision AWS infrastructure 
 
  Configuration files in this git repo
  
- Note: To store the state file, it is recommended to create the S3 bucket and DynamoDB table manually either via AWS console or using AWS CLI commands.
+ # Note: To store the state file, it is recommended to create the S3 bucket and DynamoDB table manually either via AWS console or using AWS CLI commands.
  
- Why?
+ # Why?
 
  If you use Terraform to create them, you might accidentally destroy them when you run "terraform destroy" command. 
 
@@ -12,11 +12,11 @@ Build a Reusable Terraform Module to provision AWS infrastructure
 
 # Create s3 bucket in us-east-1
 
-'''
+```
 aws s3api create-bucket \
   --bucket seg-terraform-state-bucket \
   --region us-east-1
-'''
+```
 
 # Enable Versioning 
 
