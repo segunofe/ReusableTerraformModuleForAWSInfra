@@ -69,4 +69,47 @@ aws dynamodb create-table \
 # Helpful terraform commands to keep your code clean and readable in the current directory and all subdirectories 
 ```
 terraform fmt -recursive
-``` 
+terraform init -reconfigure  # if you made any changes on your configuration files
+terraform init -migrate-state  # if you made changes to your backend.tf file
+```
+
+# Git commands to push updated code from VSCode for Repo in GitHub
+1. Switch to your project folder where the configuration files are located
+```
+cd path/to/your/project
+```
+
+2. Initialize git (if not already done)
+```
+git init
+```
+
+3. Add your remote GitHub repository
+```
+git remote add origin https://github.com/username/repo.git
+```
+
+4. Stage your changes
+```
+git add .
+```
+NOTE: . adds all files. You can also stage individual files with git add filename
+
+5. Commit your changes
+```
+git commit -m "your message"
+```
+
+6. Push to GitHub
+```
+git push -u origin master
+```
+ NOTE: Put your .tfvars and other sensitive or large files in .gitignore file locally before pushing to github
+
+7. After this, your code will be on GitHub, and future pushes can just be:
+```
+git add .
+git commit -m "your message"
+git push
+```
+ 
